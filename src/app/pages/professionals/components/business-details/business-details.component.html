@@ -1,1 +1,39 @@
-<p>business-details works!</p>
+<div class="border border-gray-200 bg-white w-full">
+    <div class="p-5 bg">
+        <span class="font-semibold ">Business Details</span>
+    </div>
+    <div class="border border-gray-200 m-3">
+        <div class=" p-3">
+            <div class="flex justify-between border-b pb-3">
+                <div class="flex space-x-5 items-center">
+                    <mat-icon class="text">person</mat-icon>
+                    Profile
+                </div>
+                <button mat-flat-button class="bg-custom text-white"> Edit Profile </button>
+            </div>
+        </div>
+        <div class="flex flex-col px-5">
+            <div *ngFor="let item of data|keyvalue:returnZero" class="mb-3">
+                <div class="flex">
+                    <div class="flex-none w-64 font-semibold capitalize text-gray-800">
+                        {{item.key|keyFormat}}:
+                    </div>
+                    <div class="flex-auto text-gray-500">
+                        <div [ngSwitch]="item.key">
+                            <div *ngSwitchCase="'domain'">
+                                <a target="_blank" [href]="'https://'+item.value"> {{item.value}} </a>
+                            </div>
+                            <div *ngSwitchCase="'date_of_birth'">
+                                {{item.value|date}}
+                            </div>
+                            <div *ngSwitchDefault>{{item.value}}</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
