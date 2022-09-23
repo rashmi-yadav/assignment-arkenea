@@ -1,4 +1,4 @@
-<div [fxLayout]="direction" fxLayoutGap="30px" fxLayoutAlign="start center" >
+<div [fxLayout]="direction" fxLayoutGap.gt-lg="30px" fxLayoutAlign="start center" >
     <img class="logo" src="../../assets/logo.png">
     <div [fxLayout]="direction" fxLayoutGap="15px">
         <a class="element" [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="drawer.close()">
