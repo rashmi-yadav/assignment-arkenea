@@ -1,0 +1,15 @@
+.logo{
+    width: 12rem;
+}
+.element{
+    padding:5px;
+    display: flex;
+    align-items:end;
+
+    mat-icon{
+        margin-right:10px;
+    }
+}
+.router-link-active{
+    color:red
+}

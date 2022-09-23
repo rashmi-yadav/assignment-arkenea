@@ -1,0 +1,10 @@
+<app-header (openDrawer)="openDrawer()"></app-header>
+<mat-drawer-container class="h-screen bg">
+    <mat-drawer #drawer>
+        <app-navigation-items direction="column" [drawer]="drawer"></app-navigation-items>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+

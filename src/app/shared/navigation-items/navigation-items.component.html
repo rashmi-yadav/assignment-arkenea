@@ -1,0 +1,30 @@
+<div [fxLayout]="direction" fxLayoutGap="30px" fxLayoutAlign="start center" >
+    <img class="logo" src="../../assets/logo.png">
+    <div [fxLayout]="direction" fxLayoutGap="15px">
+        <a class="element" [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="drawer.close()">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+            Home
+        </a>
+    
+        <a class="element" [routerLink]="['/trustees']" routerLinkActive="router-link-active" (click)="drawer.close()">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="group"></mat-icon>
+            Trustees
+        </a>
+    
+        <a class="element" [routerLink]="['/professionals']" routerLinkActive="router-link-active" (click)="drawer.close()" >
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person"></mat-icon>
+            Professionals
+        </a>
+    
+        <a class="element" [matMenuTriggerFor]="menu" >
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="more_vert"></mat-icon>
+            More
+        </a>
+    </div>
+</div>
+
+<mat-menu #menu="matMenu" xPosition="after">
+    <button mat-menu-item>
+        Settings
+    </button>
+</mat-menu>

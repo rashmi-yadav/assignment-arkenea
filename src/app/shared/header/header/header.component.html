@@ -1,0 +1,26 @@
+<div class="p-5 bg-black"></div>
+<header class="header md:px-16" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="hidden md:block">
+        <app-navigation-items direction="row"></app-navigation-items>
+
+        
+        
+    </div>
+    <div class="md:hidden">
+        <button mat-icon-button (click)="openDrawer.emit()">
+            <mat-icon>menu-item</mat-icon>
+        </button>
+    </div>
+    
+
+    <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="center center">
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+        <button class="invite-button">
+            <mat-icon>mail</mat-icon>
+            Invite
+        </button>
+        <img class="profile-pic" src="../../assets/user.png" >
+    </div>
+</header>
