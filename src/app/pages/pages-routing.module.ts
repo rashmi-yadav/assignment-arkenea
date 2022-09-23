@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path:'professionals',
-    component:ProfessionalsComponent
+    loadChildren: () => import('./professionals/professionals.module').then(m => m.ProfessionalsModule)
   }
 ];
 
